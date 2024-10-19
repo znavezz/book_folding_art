@@ -9,7 +9,8 @@ if len(sys.argv) < 2:
     sys.exit(1)
 
 input_file_path = sys.argv[1]
-output_file_path = os.path.join(os.path.dirname(input_file_path), 'Reversed_Page_Numbers_Book_Folding_Pattern.csv')
+input_file_name = os.path.basename(input_file_path)
+output_file_path = os.path.join(os.path.dirname(input_file_path), f"Reversed_{input_file_name}.csv")
 
 # Read the content of the input file and extract data lines
 lines = []
