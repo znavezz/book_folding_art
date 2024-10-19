@@ -10,7 +10,9 @@ if len(sys.argv) < 2:
 
 input_file_path = sys.argv[1]
 input_file_name = os.path.basename(input_file_path)
-output_file_path = os.path.join(os.path.dirname(input_file_path), f"Reversed_{input_file_name}.csv")
+#Remove the .txt suffix
+input_file_name_without_extension, _ = os.path.splitext(input_file_name)
+output_file_path = os.path.join(os.path.dirname(input_file_path), f"Reversed_{input_file_name_without_extension}.csv")
 
 # Read the content of the input file and extract data lines
 lines = []
